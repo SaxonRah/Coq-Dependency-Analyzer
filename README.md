@@ -1,7 +1,7 @@
-# Coq-Dependency-Analyzer
+# Coq/Rocq Dependency Analyzer
 Are you building a large Coq/Rocq Project? Want or need to visualize a dependency graph of your files interactively?
 
-Coq-Dependency-Analyzer parses .v files from a Coq/Rocq project, builds a full dependency graph, and generates an interactive HTML page.
+Coq/Rocq Dependency Analyzer parses .v files from a Coq/Rocq project, builds a full dependency graph, and generates an interactive HTML page.
 
 ## Screenshot of WebPage
 ![Coq Dependencies Webpage](https://github.com/SaxonRah/Coq-Dependency-Analyzer/blob/main/Coq_Dependencies.png "Coq Dependencies Webpage")
