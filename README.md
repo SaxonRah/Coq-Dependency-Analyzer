@@ -2,7 +2,7 @@
 Parses .v files from a Coq project, builds a full dependency graph, and generates an interactive HTML page.
 
 ## Usage:
-    `python coq_analyzer.py /path/to/coq/project [-o output.html] [--json]`
+    python coq_analyzer.py /path/to/coq/project [-o output.html] [--json]
     
 ## Features
   - Clickable dependency trees for every theorem/lemma/definition
