@@ -1,7 +1,14 @@
 # Coq-Dependency-Analyzer
-Are you building a large Coq/Rocq Project? Need to visualize a dependency graph of your files interactively?
+Are you building a large Coq/Rocq Project? Want or need to visualize a dependency graph of your files interactively?
 
 Coq-Dependency-Analyzer parses .v files from a Coq/Rocq project, builds a full dependency graph, and generates an interactive HTML page.
+
+## Screenshot of WebPage
+![Coq Dependencies Webpage](https://github.com/SaxonRah/Coq-Dependency-Analyzer/blob/main/Coq_Dependencies.png "Coq Dependencies Webpage")
+
+- *There is a .glob analyzer, `coq_glob_analyzer.py` but it's broken and I don't feel like fixing it.*
+    - Instructions for it are in the file near `__main__`
+- *The .v analyzer `coq_analyzer.py` works well enough.*
 
 ## Usage:
     python coq_analyzer.py /path/to/coq/project [-o output.html] [--json]
@@ -20,9 +27,6 @@ Coq-Dependency-Analyzer parses .v files from a Coq/Rocq project, builds a full d
        - purple : axiom/parameter
        - red : depends-on-admitted
   - JSON export
-
-## Screenshot of WebPage
-![Coq Dependencies Webpage](https://github.com/SaxonRah/Coq-Dependency-Analyzer/blob/main/Coq_Dependencies.png "Coq Dependencies Webpage")
 
 ## Reasons to use
 The taint propagation is the most useful part for a real project. It traces transitively from every Admitted and Axiom forward through the dependency graph, so you can immediately see which "proven" theorems actually rest on unfinished work.
