@@ -3,15 +3,22 @@ Are you building a large Coq/Rocq Project? Want or need to visualize a dependenc
 
 Coq/Rocq Dependency Analyzer parses .v files from a Coq/Rocq project, builds a full dependency graph, and generates an interactive HTML page.
 
-## Screenshot of WebPage
+## Screenshot of Analyzer
 ![Coq Dependencies Webpage](https://github.com/SaxonRah/Coq-Dependency-Analyzer/blob/main/Coq_Dependencies.png "Coq Dependencies Webpage")
+## Screenshot of Visualizer
+![Coq Visualizer Webpage](https://github.com/SaxonRah/Coq-Dependency-Analyzer/blob/main/Coq_Graph.png "Coq Visualizer Webpage")
 
 - *There is a .glob analyzer, `coq_glob_analyzer.py` but it's broken and I don't feel like fixing it.*
     - Instructions for it are in the file near `__main__`
 - *The .v analyzer `coq_analyzer.py` works well enough.*
 
-## Usage:
+- *There is a visualizer too but it's not great atm. The visualizer is fast and performant on huge Coq/Rocq projects but there is work that needs to be done on spreading/relaxing/moving nodes.*
+
+## Analyzer Usage:
     python coq_analyzer.py /path/to/coq/project [-o output.html] [--json]
+## Visualizer Usage:
+    run Analyzer first, to get JSON file, then visualize it
+    python coq_visualizer.py /path/to/coq/project/analyzer_output.json --open
     
 ## Features
   - Clickable dependency trees for every theorem/lemma/definition
